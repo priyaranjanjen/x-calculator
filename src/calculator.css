@@ -1,0 +1,82 @@
+/* .calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.output{
+    margin-bottom: 40px;
+}
+
+button{
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 10px;
+    font-size: large;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Adjust width as needed */
+    margin: 0 auto; /* Center calculator horizontally */
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .output {
+    text-align: right;
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+  }
+  
+  .output input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */
+    gap: 5px; /* Spacing between buttons */
+  }
+  
+  .buttons button {
+    width: 100%; /* Fill the entire cell */
+    height: 50px; /* Adjust height as needed */
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: #f0f0f0; /* Light gray background */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .buttons button:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+  }
+  
+  /* Optional styling for specific buttons (e.g., C and =) */
+  .buttons button.operator {
+    background-color: #f5a442; /* Orange color for operators */
+    color: white; /* White text for operators */
+  }
+  
+  .buttons button.equal {
+    background-color: #4CAF50; /* Green color for the equal button */
+    color: white; /* White text for the equal button */
+  }
+  
