@@ -5,16 +5,30 @@
   margin-top: 50px;
 }
 
-.output {
-  margin-bottom: 10px;
+.calculator input {
+  width: 100%;
+  height: 40px;
+  text-align: left;
+  font-size: 24px;
 }
 
-.calculator input {
-  width: 200px;
-  height: 40px;
+.input-output {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
-  text-align: right;
-  font-size: 24px;
+
+}
+
+.input, .output {
+  margin-bottom: 5px;
+  /* text-align: left; */
+  
+}
+
+.output input {
+  border: none;
+  text-align: center;
 }
 
 .buttons {

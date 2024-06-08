@@ -3,39 +3,47 @@ import './calculator.css';
 
 export default function Calculator() {
     const [input, setInput] = useState('');
+    const [output, setOutput] = useState('');
 
     const btnArr = [7, 8, 9, "+", 4, 5, 6, "-", 1, 2, 3, "*", "C", 0, "=", "/"];
 
     const handleButtonClick = (value) => {
         if (value === 'C') {
             setInput('');
+            setOutput('');
         } else if (value === '=') {
             try {
                 if (input.trim() === '') {
-                    setInput('Error');
+                    setOutput('Error');
                     return;
                 }
                 const result = eval(input);
                 if (result === Infinity) {
-                    setInput('Infinity');
+                    setOutput('Infinity');
                 } else if (isNaN(result)) {
-                    setInput('NaN');
+                    setOutput('NaN');
                 } else {
-                    setInput(result.toString());
+                    setOutput(result.toString());
                 }
             } catch {
-                setInput('Error');
+                setOutput('Error');
             }
         } else {
             setInput(input + value);
+            setOutput('');
         }
     };
 
     return (
         <div className="calculator">
             <h1>React Calculator</h1>
-            <div className="output">
-                <input type="text" name="output" value={input} readOnly />
+            <div className="input-output">
+                <div className="input">
+                    <input type="text" name="input" value={input} readOnly />
+                </div>
+                <div className="output">
+                    <input type="text" name="output" value={output} readOnly />
+                </div>
             </div>
             <div className="buttons">
                 {btnArr.map((btn, index) => (
@@ -51,4 +59,3 @@ export default function Calculator() {
         </div>
     );
 }
-    
