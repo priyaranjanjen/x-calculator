@@ -38,12 +38,9 @@ export default function Calculator() {
         <div className="calculator">
             <h1>React Calculator</h1>
             <div className="input-output">
-                <div className="input">
-                    <input type="text" name="input" value={input} readOnly />
-                </div>
-                <div className="output">
-                    <input type="text" name="output" value={output} readOnly />
-                </div>
+                <input type="text" name="input" value={input} readOnly />
+    
+                {output}
             </div>
             <div className="buttons">
                 {btnArr.map((btn, index) => (
